@@ -1,0 +1,39 @@
+<p>index works!</p>
+
+<div class="container">
+  <h2>Les produits</h2>
+  <a href="#" routerLink="/products/create/" class="btn btn-success">
+  <i class="bi bi-plus-circle-fill"></i>
+  Nouveau Produit
+  </a>
+
+  <table class="table table-striped">
+  <thead>
+  <tr>
+
+  <th>Image</th>
+  <th>Désignation</th>
+  <th>Marque</th>
+  <th>Prix</th>
+  <th>Qte Stock</th>
+  <th>Edit</th>
+  <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of produits">
+  <td><img src="{{p.imageart}}" alt="" width="80" height="80"/></td>
+
+  <td>{{ p.designation }}</td>
+  <td>{{ p.marque }}</td>
+  <td>{{ p.prix }}</td>
+  <td>{{ p.qtestock }}</td>
+
+  <th><button type="button" class="btn btn-warning">Edit</button></th>
+  <th><button type="button" class="btn btn-danger">Delete</button></th>
+
+  </tr>
+  </tbody>
+  </table>
+
+  </div>
